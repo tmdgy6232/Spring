@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/tx https://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<!-- DBMS와 연결화는 연결정보를 설정
+		이 정보는 DBCP가 사용해서 DBMS에 연결할 때 사용한다.
+	  -->
+	  <!-- BasicDataSource dataSource = new BasicDataSource() -->
+	<bean id = "dataSource"
+		class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName" value="OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe/"/>
+		<property name="username" value="user6"/>
+		<property name="password" value="1234"/>
+	</bean>
+	
+	<!-- Web Application에서 수시로 다양한 종류의 sql을 보내고
+		그 응답을 dbcp와 연결하여 처리해야 하는데
+		그때 사용하는 도구가 sqlsession이다
+		이 sqlsession은 1,2개만 가지고는 처링네 상당한 문제가 있을것이다.
+		따라서 sqlsession을 수시로 생산하고 파기하는 공장을 하나 짓는다 -->
+	<!-- SqlSessionFactoryBean sqlSessionFactoy = new ....Bean() -->
+	<bean id="sqlSessionFactory" 
+			class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="configLocation"/>
+		<property name="mapperLocations"/>
+	</bean>
+
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory"/>
+	
+	</bean>
+
+
+</beans>
