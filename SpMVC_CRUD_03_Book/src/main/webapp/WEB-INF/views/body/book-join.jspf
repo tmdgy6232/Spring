@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="rootPath" value="${pageContext.request.contextPath}" />
+
+<link rel="stylesheet" type="text/css"
+   href='${rootPath}/css/book-join.css'>
+
+<fieldset>
+   <legend>회원가입</legend>
+   <div class="in-box">
+      <label for="m_userid">ID</label> <input type="text" name="m_userid"
+         id="m_userid" placeholder="사용자 아이디를 입력하세요.">
+   </div>
+   <div class="in-box">
+      <label for="m_password">Password</label><input type="password"
+         name="m_password" id="m_password" placeholder="비밀번호를 입력하세요.">
+   </div>
+   <div class="in-box">
+      <label for="re_password">&nbsp;</label><input type="password"
+         name="re_password" id="re_password" placeholder="비밀번호를 한번 더 입력하세요.">
+   </div>
+   <div class="in-box">
+      <label for="m_email">email</label><input type="email" name="m_email"
+         id="m_email" placeholder="이메일 주소를 입력하세요.">
+   </div>
+   <div class="in-box">
+      <label for="m_tel">mobile</label> <input type="phone" name="m_tel"
+         id="m_tel" placeholder="전화번호를 입력해주세요.">
+   </div>
+   <div class="btn_box">
+      <button>회원가입</button>
+   </div>
+
+</fieldset>

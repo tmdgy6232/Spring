@@ -5,7 +5,77 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2019-07-09T18:34:49Z</updated>
+  <updated>2019-07-16T18:53:03Z</updated>
+  <entry>
+    <title>This Week in Spring - July 16, 2019</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/07/16/this-week-in-spring-july-16-2019" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2019-07-16:3746</id>
+    <updated>2019-07-16T18:53:03Z</updated>
+    <content type="html">&lt;p&gt;HI Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! I&amp;rsquo;ve just returned from Lima, Peru, for JConf Peru, and then today finished speaking at the SpringOne Tour Philadelphia event. Now, I&amp;rsquo;m off to Portland, OR, for the epic OSCON show. As usual, we&amp;rsquo;ve got tons to cover so let&amp;rsquo;s get to it! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/07/12/spring-tools-4-3-1-released"&gt;Spring Tools 4.3.1 released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;In last week&amp;rsquo;s installment of &lt;a href="https://spring.io/blog/2019/07/12/a-bootiful-podcast-mike-amundsen-on-apis-http-rest-and-more"&gt;&lt;em&gt;A Bootiful Podcast&lt;/em&gt;, I interview Mr. REST / HATEOAS, Mike Amundsen, on APIs, HTTP, REST and more&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;This is an interesting post &lt;a href="https://www.cloudfoundry.org/blog/orange-makes-novel-use-of-cloud-foundry-for-best-developer-experience/"&gt;on how Orange makes use of Cloud Foundry&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-gateway/issues/1160"&gt;Check out this resolution for those using Spring Cloud Gateway and experiencing issues doing a retry &lt;code&gt;POST&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Check out &lt;a href="https://medium.com/netifi/rsocket-video-channel-on-youtube-d33f1562a493"&gt;the RSocket YouTube channel&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Have you registered for SpringOne Platform 2019? &lt;a href="https://springoneplatform.io/register?utm_campaign=s1p-website-social&amp;utm_content=1561151675&amp;utm_medium=social-sprout&amp;utm_source=twitter"&gt;Do it&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;This is amazing - &lt;a href="https://github.com/neo4j/sdn-rx"&gt;a new reactive Spring Data Neo4J implementation&lt;/a&gt; is coming!&lt;/li&gt;
+  &lt;li&gt;Check this out - &lt;a href="https://content.pivotal.io/blog/introducing-rabbitmq-for-kubernetes"&gt;there&amp;rsquo;s now a Kubernetes-ready distribution of RabbitMQ&lt;/a&gt;. &lt;em&gt;Now&lt;/em&gt; it&amp;rsquo;s cloud-native!&lt;/li&gt;
+  &lt;li&gt;I love the new Microsoft Azure API development guidelines which encourage the use of Project Reactor &lt;a href="https://azuresdkspecs.z5.web.core.windows.net/JavaSpec.html"&gt;to build elegant, asynchronous, reactive APIs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Here&amp;rsquo;s a nice post by JHipster lead and Azure Developer Advocate Julien Dubois on going &lt;a href="https://dev.to/azure/going-full-reactive-with-spring-webflux-and-the-new-cosmosdb-api-v3-1n2a"&gt;fully reactive with Spring Webflux and the new CosmosDB API v3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Tools 4.3.1 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/07/12/spring-tools-4-3-1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Martin Lippert</name>
+    </author>
+    <id>tag:spring.io,2019-07-12:3745</id>
+    <updated>2019-07-12T13:21:58Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
+&lt;p&gt;I am happy to announce the 4.3.1 release of the Spring Tools 4 for Eclipse, Visual Studio Code, and Theia.&lt;/p&gt;
+&lt;p&gt;Highlights from this release include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;(all language servers)&lt;/em&gt; performance: further improvements to the language server startup time&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: wrong error markers in properties files (&lt;a href="https://github.com/spring-projects/sts4/issues/314"&gt;#314&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(VS Code)&lt;/em&gt; fixed: vscode goto definition error with lsp (&lt;a href="https://github.com/spring-projects/sts4/issues/309"&gt;#309&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: STS4 can now be installed again into an existing Eclipse install when running on JDK8&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: deadlock when starting up the Spring Boot language server for workspaces with many projects&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: cannot launch apps in boot dashboard anymore when using early builds of Eclipse 2019-09 (4.13)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; improved, but not completely fixed yet: freeze when opening pom.xml file - if you still experience slowness here, please apply the workaround as documented in the issues comment (&lt;a href="https://github.com/spring-projects/sts4/issues/318#issuecomment-510851757"&gt;comment on #314&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To download the distribution for Eclipse and find links to the marketplace entries for Visual Studio Code and Theia, please go visit:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Tools 4: &lt;a href="https://spring.io/tools/"&gt;https://spring.io/tools/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Detailed changes can be found here: &lt;a href="https://github.com/spring-projects/sts4/wiki/Changelog#2019-07-12-431-release"&gt;https://github.com/spring-projects/sts4/wiki/Changelog#2019-07-12-431-release&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Spring Tools 4.3.2 is scheduled to be released in late August 2019.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>A Bootiful Podcast: Mike Amundsen on APIs, HTTP, REST and more</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/07/12/a-bootiful-podcast-mike-amundsen-on-apis-http-rest-and-more" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2019-07-12:3744</id>
+    <updated>2019-07-12T08:18:58Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of a Bootiful Podcast! This week &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to &amp;ldquo;Mr. REST&amp;rdquo; &lt;a href="http://twitter.com/mamund"&gt;Mike Amundsen (@mamund)&lt;/a&gt; to talk about APIs, Microservices, HATEOAS, HTTP and much more! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://twitter.com/mamund"&gt;Mike on Twitter (@mamund)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/650006849&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - July 9th, 2019</title>
     <link rel="alternate" href="https://spring.io/blog/2019/07/09/this-week-in-spring-july-9th-2019" />
@@ -1000,84 +1070,6 @@ dependencies {&#xD;
 &lt;p&gt;Spring Tools 4.3.1 is scheduled to be released in late July 2019.&lt;/p&gt;
 &lt;p&gt;Enjoy!&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;P.S.: Due to a system outage, the update to the tools web page will take a little longer, please go to &lt;a href="https://github.com/spring-projects/sts4/wiki/Installation"&gt;https://github.com/spring-projects/sts4/wiki/Installation&lt;/a&gt; in the meantime for details about the new Theia packages.&lt;/em&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: IBM's Pratik Patel on Java, Functions-as-a-service, cloud infrastructure, Spring and Devnexus</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/06/21/a-bootiful-podcast-ibm-s-pratik-patel-on-java-functions-as-a-service-cloud-infrastructure-spring-and-devnexus" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2019-06-21:3726</id>
-    <updated>2019-06-21T07:23:20Z</updated>
-    <content type="html">&lt;p&gt;Hi Spring fans! This week &lt;a href="http://twitter.com/Starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; speaks to &lt;a href="http://twitter.com/PrPatel"&gt;@IBM&amp;rsquo;s Pratik Patel (@prpatel)&lt;/a&gt; about function-as-a-service, Spring Cloud Function, Spring, Java and Devnexus&lt;/p&gt;
-&lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/639959205&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tool Suite 3.9.9 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/06/20/spring-tool-suite-3-9-9-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Martin Lippert</name>
-    </author>
-    <id>tag:spring.io,2019-06-20:3725</id>
-    <updated>2019-06-20T07:38:59Z</updated>
-    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
-&lt;p&gt;I am happy to announce the 3.9.9 maintenance release of the Spring Tool Suite 3 (STS3).&lt;/p&gt;
-&lt;p&gt;Highlights from this release include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;updated to Eclipse 2019-06 release&lt;/li&gt;
-  &lt;li&gt;mimics the https-preferring XSD schema lookup of the core Spring framework&lt;/li&gt;
-  &lt;li&gt;allows users to use https for Spring schema locations as default&lt;/li&gt;
-  &lt;li&gt;various bug fixes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To download the distributions, please go visit:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Tool Suite 3: &lt;a href="https://spring.io/tools3/sts/all"&gt;&lt;a href="https://spring.io/tools3/sts/all"&gt;https://spring.io/tools3/sts/all&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Detailed new and noteworthy notes can be found here: &lt;a href="https://docs.spring.io/sts/nan/v399/NewAndNoteworthy.html"&gt;STS 3.9.9 New &amp;amp; Noteworthy&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;STS 3.9.9 is presumably the final release of the Spring Tool Suite 3 distribution. At the moment, there are no further updates or maintenance releases planned. For moving forward we recommend to switch to the next generation of the tooling, the &lt;a href="https://spring.io/tools"&gt;Spring Tools 4&lt;/a&gt;. In case of high demand, we might produce additional maintenance update releases of the Spring Tool Suite 3. But in case you are missing important features in the new Spring Tools 4 that prevents you from switching over, let us know and report an enhancement request at &lt;a href="https://github.com/spring-projects/sts4/issues"&gt;https://github.com/spring-projects/sts4/issues&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Enjoy!&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>CVE-2019-11272: Spring Security 4.2.13 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/06/19/cve-2019-11272-spring-security-4-2-13-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Josh Cummings</name>
-    </author>
-    <id>tag:spring.io,2019-06-19:3724</id>
-    <updated>2019-06-19T21:13:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;We have &lt;a href="https://github.com/spring-projects/spring-security/milestone/146"&gt;released Spring Security 4.2.13&lt;/a&gt; to address &lt;a href="https://pivotal.io/security/cve-2019-11272"&gt;CVE-2019-11272: PlaintextPasswordEncoder authenticates encoded passwords that are null&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Users are encouraged to update immediately.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;With Spring Boot, you can override the Spring Security version in Maven like so:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&amp;lt;properties&amp;gt;
-    &amp;lt;spring-security.version&amp;gt;4.2.13.RELEASE&amp;lt;/spring-security.version&amp;gt;
-&amp;lt;/properties&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Or in Gradle like so:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code&gt;ext['spring-security.version'] = '4.2.13.RELEASE'&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Note that users of Spring Security 5+ are not affected by this vulnerability.&lt;/p&gt;
-&lt;/div&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
