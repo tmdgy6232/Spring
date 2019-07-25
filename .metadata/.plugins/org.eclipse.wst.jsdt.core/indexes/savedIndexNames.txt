@@ -1,11 +1,5 @@
 INDEX VERSION 1.4+C:\bizwork\spwork\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2517587156.index
-3147138775.index
-3325126298.index
-1773709441.index
-1753189971.index
 1245956544.index
 2211959297.index
-3580897972.index
-3806771835.index
-1753189971.index
+1507595101.index
+3325126298.index

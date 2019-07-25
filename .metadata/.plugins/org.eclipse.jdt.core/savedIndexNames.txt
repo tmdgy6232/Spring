@@ -1,9 +1,5 @@
 INDEX VERSION 1.131+C:\bizwork\spwork\.metadata\.plugins\org.eclipse.jdt.core
-3008342216.index
-3581987265.index
-1823900235.index
 3325126298.index
 2211959297.index
+3008342216.index
 905778965.index
-409243817.index
-1245956544.index
