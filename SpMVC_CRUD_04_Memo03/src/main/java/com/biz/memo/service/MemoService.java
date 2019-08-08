@@ -70,7 +70,7 @@ public class MemoService {
 		// MemoDao mDao = sqlSession.getMapper(MemoDao.class);
 		int ret = mDao.insert(memoVO);
 		
-		return 0;
+		return ret;
 
 	}
 
